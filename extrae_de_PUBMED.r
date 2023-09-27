@@ -52,7 +52,7 @@ while (j <= length(data)){
 }
 head(extract)
 
-
+writeLines(extract, "resultados.txt")
 
 
 

@@ -2,15 +2,19 @@
 # Enrique Buendia
 # extrae el abstract del archivo de PUBMED.txt
 
+####### 1a parte
 
 # Read the text file
-data <- readLines("pubmed.txt")
-
+con <- file('pubmed.txt')
+data <- readLines(con)
+close(con)
 # Print the data
 print(data)
 
 
-buscar="AB"
+###### segunda parte
+
+buscar="AB"  # extrae solo el abstract
 ll<- length(buscar) + 1
 blancos=c()
 for (j in 1:ll){ blancos=c(blancos," ")}
@@ -47,7 +51,7 @@ while (j <= length(data)){
 	ab_acum <- c()
 	
 }
-print(extract)
+head(extract)
 
 
 
